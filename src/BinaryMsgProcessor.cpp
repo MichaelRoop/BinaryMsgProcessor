@@ -6,7 +6,6 @@
 */
 
 #include "BinaryMsgProcessor.h"
-#include "BinaryMsgEnumerations.h"
 
 #ifdef BINARY_MSG_DEBUG
 struct MsgHeader {
