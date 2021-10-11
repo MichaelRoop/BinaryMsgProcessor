@@ -62,7 +62,7 @@ class BinaryMsgProcessor {
 public:
 
 	// Register in message ids and expected data type for validation
-	static bool RegisterInIds(uint8_t id, MsgDataType dataType);
+	static bool RegisterInMsgId(uint8_t id, MsgDataType dataType);
 
 	// Validate only the header fragment on read
 	static bool ValidateHeader(uint8_t* buff, uint8_t size);
@@ -76,14 +76,14 @@ public:
 	// Validate the entire message after it is read
 	static bool ValidateMessage(uint8_t* buff, int length);
 
-	static void RegisterFuncBool(msgFuncPtrBool ptr);
-	static void RegisterFuncInt8(msgFuncPtrInt8 ptr);
-	static void RegisterFuncInt16(msgFuncPtrInt16 ptr);
-	static void RegisterFuncInt32(msgFuncPtrInt32 ptr);
-	static void RegisterFuncUInt8(msgFuncPtrUInt8 ptr);
-	static void RegisterFuncUInt16(msgFuncPtrUInt16 ptr);
-	static void RegisterFuncUInt32(msgFuncPtrUInt32 ptr);
-	static void RegisterFuncFloat32(msgFuncPtrFloat32 ptr);
+	static void RegisterInMsgHandler_Bool(msgFuncPtrBool ptr);
+	static void RegisterInMsgHandler_Int8(msgFuncPtrInt8 ptr);
+	static void RegisterInMsgHandler_Int16(msgFuncPtrInt16 ptr);
+	static void RegisterInMsgHandler_Int32(msgFuncPtrInt32 ptr);
+	static void RegisterInMsgHandler_UInt8(msgFuncPtrUInt8 ptr);
+	static void RegisterInMsgHandler_UInt16(msgFuncPtrUInt16 ptr);
+	static void RegisterInMsgHandler_UInt32(msgFuncPtrUInt32 ptr);
+	static void RegisterInMsgHandler_Float32(msgFuncPtrFloat32 ptr);
 #ifdef BINARY_MSG_DEBUG
 	static void RegisterErrCallback(errEventPtr ptr);
 #endif // BINARY_MSG_DEBUG

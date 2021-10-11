@@ -63,7 +63,7 @@ BinaryMsgProcessor::BinaryMsgProcessor() {
 
 #ifndef SECTION_PUBLIC_METHODS
 
-bool BinaryMsgProcessor::RegisterInIds(uint8_t id, MsgDataType dataType) {
+bool BinaryMsgProcessor::RegisterInMsgId(uint8_t id, MsgDataType dataType) {
 	if (BinaryMsgProcessor::currentIdListNextPos < MAX_IN_ID_REG) {
 		if (dataType > typeUndefined && dataType < typeInvalid) {
 			inMsgIds[currentIdListNextPos][0] = id;
@@ -81,42 +81,42 @@ void BinaryMsgProcessor::RegisterErrCallback(errEventPtr ptr) {
 #endif // BINARY_MSG_DEBUG
 
 
-void BinaryMsgProcessor::RegisterFuncBool(msgFuncPtrBool ptr) {
+void BinaryMsgProcessor::RegisterInMsgHandler_Bool(msgFuncPtrBool ptr) {
 	BinaryMsgProcessor::ptrBool = ptr;
 }
 
 
-void BinaryMsgProcessor::RegisterFuncInt8(msgFuncPtrInt8 ptr) {
+void BinaryMsgProcessor::RegisterInMsgHandler_Int8(msgFuncPtrInt8 ptr) {
 	BinaryMsgProcessor::ptrInt8 = ptr;
 }
 
 
-void BinaryMsgProcessor::RegisterFuncInt16(msgFuncPtrInt16 ptr) {
+void BinaryMsgProcessor::RegisterInMsgHandler_Int16(msgFuncPtrInt16 ptr) {
 	BinaryMsgProcessor::ptrInt16 = ptr;
 }
 
 
-void BinaryMsgProcessor::RegisterFuncInt32(msgFuncPtrInt32 ptr) {
+void BinaryMsgProcessor::RegisterInMsgHandler_Int32(msgFuncPtrInt32 ptr) {
 	BinaryMsgProcessor::ptrInt32 = ptr;
 }
 
 
-void BinaryMsgProcessor::RegisterFuncUInt8(msgFuncPtrUInt8 ptr) {
+void BinaryMsgProcessor::RegisterInMsgHandler_UInt8(msgFuncPtrUInt8 ptr) {
 	BinaryMsgProcessor::ptrUInt8 = ptr;
 }
 
 
-void BinaryMsgProcessor::RegisterFuncUInt16(msgFuncPtrUInt16 ptr) {
+void BinaryMsgProcessor::RegisterInMsgHandler_UInt16(msgFuncPtrUInt16 ptr) {
 	BinaryMsgProcessor::ptrUInt16 = ptr;
 }
 
 
-void BinaryMsgProcessor::RegisterFuncUInt32(msgFuncPtrUInt32 ptr) {
+void BinaryMsgProcessor::RegisterInMsgHandler_UInt32(msgFuncPtrUInt32 ptr) {
 	BinaryMsgProcessor::ptrUInt32 = ptr;
 }
 
 
-void BinaryMsgProcessor::RegisterFuncFloat32(msgFuncPtrFloat32 ptr) {
+void BinaryMsgProcessor::RegisterInMsgHandler_Float32(msgFuncPtrFloat32 ptr) {
 	BinaryMsgProcessor::ptrFloat32 = ptr;
 }
 
