@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding ="utf-8" ?>
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
-  <PropertyGroup Label="Globals" >
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
     <HasSharedItems>true</HasSharedItems>
     <ItemsProjectGuid>{794d55bd-4bd4-4a69-ab9d-4a3efc188fd0}</ItemsProjectGuid>
@@ -14,18 +14,20 @@
     <ProjectCapability Include="SourceItemsFromImports" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)src\BinaryMsgMessages.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)src\BinaryMsgProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="$(MSBuildThisFileDirectory)BinaryMsgDefines.h" />
-<ClInclude Include="$(MSBuildThisFileDirectory)src\BinaryMsgProcessor.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\BinaryMsgEnumerations.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\BinaryMsgMessages.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)src\BinaryMsgProcessor.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="$(MSBuildThisFileDirectory)library.properties" />
-<Text Include="$(MSBuildThisFileDirectory)readme.txt" />
+    <Text Include="$(MSBuildThisFileDirectory)readme.txt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)BinaryMsgProcessor.vcxitems" />
-<None Include="$(MSBuildThisFileDirectory)BinaryMsgProcessor.vcxitems.filters" />
+    <None Include="$(MSBuildThisFileDirectory)BinaryMsgProcessor.vcxitems.filters" />
   </ItemGroup>
 </Project>
