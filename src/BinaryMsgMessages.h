@@ -65,7 +65,7 @@ public:
 	MsgBinary(uint8_t id, T value);
 private:
 	void Init();
-};
+} __attribute__((packed));
 
 //// Declare specializations on the Init
 template<> void MsgBinary<bool>::Init();
@@ -97,16 +97,15 @@ template<> MsgBinary<uint32_t>::MsgBinary(uint8_t id, uint32_t value);
 template<> MsgBinary<float>::MsgBinary(uint8_t id, float value);
 
 
-// Create Packed typedefs
-__attribute__((packed)) typedef MsgBinary<bool> MsgBool;
-__attribute__((packed)) typedef MsgBinary<int8_t> MsgInt8;
-__attribute__((packed)) typedef MsgBinary<int16_t> MsgInt16;
-__attribute__((packed)) typedef MsgBinary<int32_t> MsgInt32;
-__attribute__((packed)) typedef MsgBinary<uint8_t> MsgUInt8;
-__attribute__((packed)) typedef MsgBinary<uint16_t> MsgUInt16;
-__attribute__((packed)) typedef MsgBinary<uint32_t> MsgUInt32;
-__attribute__((packed)) typedef MsgBinary<float> MsgFloat32;
-
+// typedefs - pre packed via main template class
+typedef MsgBinary<bool> MsgBool;
+typedef MsgBinary<int8_t> MsgInt8;
+typedef MsgBinary<int16_t> MsgInt16;
+typedef MsgBinary<int32_t> MsgInt32;
+typedef MsgBinary<uint8_t> MsgUInt8;
+typedef MsgBinary<uint16_t> MsgUInt16;
+typedef MsgBinary<uint32_t> MsgUInt32;
+typedef MsgBinary<float> MsgFloat32;
 
 
 #endif
