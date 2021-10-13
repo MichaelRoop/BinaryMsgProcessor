@@ -85,7 +85,7 @@ public:
 	static void RegisterInMsgHandler_UInt32(msgFuncPtrUInt32 ptr);
 	static void RegisterInMsgHandler_Float32(msgFuncPtrFloat32 ptr);
 #ifdef BINARY_MSG_DEBUG
-	static void RegisterErrCallback(errEventPtr ptr);
+	static void RegisterErrHandler(errEventPtr ptr);
 #endif // BINARY_MSG_DEBUG
 
 private:

@@ -75,7 +75,7 @@ bool BinaryMsgProcessor::RegisterInMsgId(uint8_t id, MsgDataType dataType) {
 }
 
 #ifdef BINARY_MSG_DEBUG
-void BinaryMsgProcessor::RegisterErrCallback(errEventPtr ptr) {
+void BinaryMsgProcessor::RegisterErrHandler(errEventPtr ptr) {
 	BinaryMsgProcessor::errCallback = ptr;
 }
 #endif // BINARY_MSG_DEBUG
